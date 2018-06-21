@@ -1,5 +1,7 @@
 #include<iostream>
 
+void swap(int &,int &);
+
 using namespace std;
   int main()
 {
@@ -14,8 +16,10 @@ using namespace std;
 
 } 
 
-  swap(int &x,int &y)
+   void swap(int &a,int &b)
   { 
-   
+   a=a+b;
+   b=a-b;
+   a=a-b;
    
      }
