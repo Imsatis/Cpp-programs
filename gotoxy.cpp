@@ -29,9 +29,9 @@ using namespace std;
   { 
     int x,y;
 
-    cout<<"Enter x";cin>>x; //Horizontal Line
+    cout<<"Enter x  ";cin>>x; //Horizontal Line
 
-    cout<<"Enter y";cin>>y; //Vertical Line
+    cout<<"Enter y  ";cin>>y; //Vertical Line
 
     gotoxy(x,y); //Function Calling
 
