@@ -39,7 +39,10 @@ using namespace std;
    cin>>a>>b>>c>>d;
     add ob1(a,b);
     add ob2(c,d);
-    add ob3(ob1,ob2);
+    add temp(ob1,ob2);
+    add ob3(a,d);
+    add temp();	
+
 
     ob1.show();
 
@@ -47,6 +50,7 @@ using namespace std;
 
     ob3.show();
     getch();
+
      }  
 
 
