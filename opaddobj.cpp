@@ -8,17 +8,25 @@ using namespace std;
 
     public:
    
+  /** mycl()
+  {
+    a=0;
+    b=0;
+     } **/
+
    mycl(int x,int y)
     { 
        a=x;
        b=y;
  
       }
-   void sum(mycl &temp)
+   mycl sum(mycl &temp)
     {
-      
-      a=a+temp.a;
-      b=b+temp.b;
+      mycl t(0,0);
+
+      t.a=a+temp.a;
+      t.b=b+temp.b;
+     // return t;
 
        }
     void show()
@@ -32,11 +40,12 @@ using namespace std;
    
      int main()
    {
-      mycl ob1(100,200);
-      mycl ob2(200,100);
+      mycl ob1(10,200);
+      mycl ob2(200,10);
       
-      ob1.sum(ob2);
+      mycl t=ob1.sum(ob2);
        
       ob1.show();
+      t.show();
     
        }  
