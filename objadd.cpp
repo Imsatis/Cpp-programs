@@ -17,12 +17,21 @@ using namespace std;
           
 	  }   
 
-      add(add &o1,add &o2)
+    /*  add(add &o1,add &o2)
      {
        a=o1.a+o2.a;
        b=o1.b+o2.b;
 
-        } 
+        } */
+
+     add sum(add &temp)
+    { 
+       add t;
+      t.a=a+temp.a;
+      t.b=b+temp.b;
+      return t; 
+
+        }   
 
     void show()
    { 
@@ -35,20 +44,23 @@ using namespace std;
 
    int main()
  {
-   int a,b,c,d;
-   cin>>a>>b>>c>>d;
-    add ob1(a,b);
-    add ob2(c,d);
-    add temp(ob1,ob2);
-    add ob3(a,d);
-    add temp();	
+   // int a,b,c,d;
+   // cin>>a>>b>>c>>d;
+   // add ob1(a,b);
+   // add ob2(c,d);
+   // add ob3(ob1,ob2);
+
+      add ob1(100,200);
+      add ob2(200,100);
+
+      add temp=ob1.sum(ob2);
 
 
-    ob1.show();
+   // ob1.show();
 
-    ob2.show();
+   // ob2.show();
 
-    ob3.show();
+   // ob3.show();
     getch();
 
      }  
