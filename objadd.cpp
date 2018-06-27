@@ -17,16 +17,16 @@ using namespace std;
           
 	  }   
 
-    /*  add(add &o1,add &o2)
+      add(add &o1,add &o2)
      {
        a=o1.a+o2.a;
        b=o1.b+o2.b;
 
-        } */
+        } 
 
      add sum(add &temp)
     { 
-       add t;
+       add t(0,0);
       t.a=a+temp.a;
       t.b=b+temp.b;
       return t; 
@@ -61,6 +61,8 @@ using namespace std;
    // ob2.show();
 
    // ob3.show();
+
+   temp.show();
     getch();
 
      }  
