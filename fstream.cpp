@@ -5,12 +5,13 @@ using namespace std;
  
      int main()
 { 
-   
+   int x,y;
+   cin>>x>>y;
    ofstream file;
 
    file.open("frst.txt");
 
-   file<<"This is my first file";
+   file<<x<<y;
 
    file.close();
 
