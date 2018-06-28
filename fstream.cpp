@@ -2,10 +2,15 @@
 #include<fstream>
 
 using namespace std;
- 
-     int main()
-{ 
+
+
+  class my
+{
    int x,y,a,b;
+   
+   public:
+    void output()
+ {   
    cin>>x>>y;
    ofstream file;
 
@@ -14,7 +19,10 @@ using namespace std;
    file<<x<<"\n"<<y;
 
    file.close();
+                 }
 
+     void input()		 
+ {  
    ifstream data;
 
    data.open("frst.txt");
@@ -22,5 +30,13 @@ using namespace std;
    data>>a>>b;
    cout<<"a "<<a<<"\nb "<<b<<"\nx "<<x<<"\ny "<<y;
    data.close();
+       }
+  
+    };  
 
+     int main()
+{ 
+  my ob1;
+  ob1.output();
+  ob1.input();
     }     
