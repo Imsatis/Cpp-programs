@@ -9,7 +9,20 @@ using namespace std;
    int x,y,a,b;
    
    public:
-    void output()
+    
+     my()
+   { 
+ 
+   ifstream data;
+
+   data.open("frst.txt");
+
+   data>>a>>b;
+ 
+
+      }  
+   
+   void output()
  {   
    cin>>x>>y;
    ofstream file;
@@ -31,12 +44,17 @@ using namespace std;
    cout<<"a "<<a<<"\nb "<<b<<"\nx "<<x<<"\ny "<<y;
    data.close();
        }
-  
+          
+    void show()
+   { 
+     cout<<"\nx "<<x<<"\ny "<<y<<"\na "<<a<<"\nb "<<b;
+      } 
     };  
 
      int main()
 { 
   my ob1;
+  ob1.show();
   ob1.output();
   ob1.input();
     }     
