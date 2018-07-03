@@ -16,12 +16,12 @@ using namespace std;
      while(read)
      {
        read.get(ch);
-       cout<<"\n"<<ch;
+       cout<<"\nch "<<ch;
        count++;
-       cout<<"&"<<&count;
+       cout<<"  &  "<<&count;
        cout<<"\nread "<<read;
        getch();
-      
+
        }
      read.close();
      cout<<"\n count "<<count;
@@ -29,6 +29,6 @@ using namespace std;
      getch();
 
 
-     }    
-    
+     }
+
 
