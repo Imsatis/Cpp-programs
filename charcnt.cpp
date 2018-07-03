@@ -12,12 +12,13 @@ using namespace std;
      read.open("characters.txt");
      char ch;
      int count=0;
-     cout<<read;
+     cout<<"\n"<<read;
      while(read)
      {
        read.get(ch);
-       cout<<ch;
+       cout<<"\n"<<ch;
        count++;
+       cout<<"&"<<&count;
        cout<<"\nread "<<read;
        getch();
       
