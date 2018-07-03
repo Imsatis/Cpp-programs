@@ -9,7 +9,7 @@
     public:
    
 
-     void chk(int x,int y)
+     int chk(int x,int y)
     { 
       if(x<10&&y<10)
      { int r;
@@ -17,7 +17,7 @@
       cout<<"\nr "<<r;
          }
        else 
-       //return 0;
+       return 0;
 
        }   
 
