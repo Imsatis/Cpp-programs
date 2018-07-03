@@ -8,6 +8,7 @@ using namespace std;
     int main()
 {
      ifstream read;
+     cout<<"init "<<read;
      read.open("characters.txt");
      char ch;
      int count=0;
@@ -17,7 +18,7 @@ using namespace std;
        read.get(ch);
        cout<<ch;
        count++;
-       cout<<read;
+       cout<<"\nread "<<read;
        getch();
       
        }
