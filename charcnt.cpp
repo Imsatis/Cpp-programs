@@ -10,19 +10,20 @@ using namespace std;
      ifstream read;
      read.open("characters.txt");
      char ch;
-     int count=0,x,y;
-     while(read.get(ch))
+     int count=0;
+     cout<<read;
+     while(read)
      {
-       //read.get(ch);
+       read.get(ch);
        cout<<ch;
        count++;
-       //x=ch;
-       //cout<<"\n x"<<x;
+       cout<<read;
+       getch();
       
        }
      read.close();
      cout<<"\n count "<<count;
-    // exit(1);
+
      getch();
 
 
