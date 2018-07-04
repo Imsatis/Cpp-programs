@@ -12,10 +12,11 @@ using namespace std;
      char ch;
      int count=0;
      while(read.get(ch))
-     { //cout<<ch; 
+     { cout<<ch; 
        read.get(ch);
        cout<<ch;
        count++;
+       getch();
        //cout<<read;
 
        }
