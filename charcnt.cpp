@@ -8,23 +8,21 @@ using namespace std;
     int main()
 {
      ifstream read;
-     cout<<"init "<<read;
-     read.open("characters.txt");
+     read.open("hello.txt");
      char ch;
      int count=0;
-     cout<<"\n"<<read;
-     while(read)
-     {
+     while(read.get(ch))
+     { //cout<<ch; 
        read.get(ch);
-       cout<<"\nch "<<ch;
+       cout<<ch;
        count++;
-       cout<<"  &  "<<&count;
-       cout<<"\nread "<<read;
-       getch();
+       //cout<<read;
 
        }
      read.close();
-     cout<<"\n count "<<count;
+
+     cout<<"\n count "<<count<<"\n"<<read;
+
 
      getch();
 
