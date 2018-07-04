@@ -9,12 +9,12 @@ using namespace std;
 {
      ifstream read;
      read.open("hello.txt");
-     char ch;
+     char ch,c;
      int count=0;
-     while(read.get(ch))
-     { cout<<ch; 
+     while(read.get(c))
+     { cout<<"\nc "<<c<<"  "<<ch; 
        read.get(ch);
-       cout<<ch;
+       cout<<"\nch "<<(int)ch;
        count++;
        getch();
        //cout<<read;
