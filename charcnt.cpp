@@ -11,13 +11,11 @@ using namespace std;
      read.open("hello.txt");
      char ch,c;
      int count=0;
-     while(read.get(c))
-     { cout<<"\nc "<<c<<"  "<<ch; 
+     while(read)
+     {  
        read.get(ch);
-       cout<<"\nch "<<(int)ch;
+       cout<<"\nch "<<ch;
        count++;
-       getch();
-       //cout<<read;
 
        }
      read.close();

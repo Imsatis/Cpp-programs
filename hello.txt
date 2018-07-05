@@ -1,1 +1,2 @@
-a
+i m satish thapa 
+this is fstream testing
