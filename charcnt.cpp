@@ -14,13 +14,13 @@ using namespace std;
      while(read)
      {  
        read.get(ch);
-       cout<<"\nch "<<ch;
+       cout<<ch;
        count++;
 
        }
      read.close();
 
-     cout<<"\n count "<<count<<"\n"<<read;
+     cout<<"\n count "<<count-1;
 
 
      getch();
