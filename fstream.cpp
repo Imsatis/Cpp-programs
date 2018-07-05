@@ -1,6 +1,8 @@
 #include<iostream>
 #include<fstream>
 
+                   //creating and reading from a txt file;
+
 using namespace std;
 
 
@@ -13,7 +15,7 @@ using namespace std;
      my()
    { 
  
-   ifstream data;
+   ifstream data;                 // ud default constructor;
 
    data.open("frst.txt");
 
@@ -27,7 +29,7 @@ using namespace std;
    cin>>x>>y;
    ofstream file;
 
-   file.open("frst.txt");
+   file.open("frst.txt");           //taking value from user;
 
    file<<x<<"\n"<<y;
 
@@ -47,14 +49,14 @@ using namespace std;
           
     void show()
    { 
-     cout<<"\nx "<<x<<"\ny "<<y<<"\na "<<a<<"\nb "<<b;
+     cout<<"\na "<<a<<"\nb "<<b;
       } 
     };  
 
      int main()
 { 
-  my ob1;
-  ob1.show();
-  ob1.output();
-  ob1.input();
+  my ob1;         //constructor working value assigning;
+  ob1.show();     //showing the ud default constructor assigned values 
+  ob1.output();   //new value taking from user and saving in txt file
+  ob1.input();    //value assigning from existing txt file
     }     
