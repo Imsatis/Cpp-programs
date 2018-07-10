@@ -1,6 +1,7 @@
 #include <iostream>
 #include <conio.h>
 #include<string>
+#include<fstream>
 
 
 using namespace std;
@@ -18,8 +19,6 @@ public:
 
       //string st1,st,ary[10];
 
-      for (int i=0;i<15;i++)
-
        
 
       void show() {
@@ -33,11 +32,16 @@ public:
       ifstream read_item;
       read_item.open("chidata.md");      //udd constructor for reading items;    
     
+      string *ptr[15];
 
+      for (int i=0;i<15;i++) {
+
+        read_item>>*ptr[i]; 
+      }
 
        
 
-        for(int i=0;i<2;i++) {
+        for(int i=0;i<15;i++) {
 
           cout<<*ptr[i];
 
@@ -50,8 +54,8 @@ public:
      int main() {
 
       str ob;
-      ob.st1="hellow";
-      ob.st="world";
+      //ob.st1="hellow";
+      //ob.st="world";
       
       ob.show();
       return 0;
