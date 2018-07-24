@@ -1,15 +1,34 @@
 #include<iostream>
+#include<fstream>
 
+
+  class AI {
+  
+     AI() {
+     
+       //string take;
+       //fstream read;
+       //read.open(define.cpp);
+
+     }
+
+  };
 
  void test() {
 
-   #define data "hellow"
+   #define swap (int)a
+   //std::cin>>swap;
 
  // std::cout<<data;
 
 }
 
  int main() {
- 
-    std::cout<<data;
+
+  
+   int a=10,b=20;
+
+   a=b;
+  
+    std::cout<<a<<"  "<<swap;
  }
