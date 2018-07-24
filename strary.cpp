@@ -32,31 +32,51 @@ public:
       ifstream read_item;
       read_item.open("chidata.md");      //udd constructor for reading items;    
     
-      string *ptr[15];
+      string str[10]={a,b,c,d,e,f,g,h};
+      string *ptr;
 
       for (int i=0;i<15;i++) {
 
-        read_item>>*ptr[i]; 
+       // read_item>>*ptr[i]; 
       }
 
        
 
         for(int i=0;i<15;i++) {
 
-          cout<<*ptr[i];
+                 for (int j=0;j<10;j++) {
+
+                  cout<<"\n"<<ptr[i+j];
+                 }        
 
       		
       	}
-      } 	
+      } 
+
+      string reading(ifstream &read_item) {
+
+            char ch;
+            string temp;                            
+
+             while((read_item.get(ch)&&ch!='\n')) {
+
+                  temp+=ch;
+                  }
+               return temp;   
+           }
+	
 
      };
 
      int main() {
-
+      int a; 
       str ob;
       //ob.st1="hellow";
       //ob.st="world";
       
-      ob.show();
+      //ob.show();
+      a=sizeof(string);
+      cout<<a;
+      getch();
       return 0;
      }                    
