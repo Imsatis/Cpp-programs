@@ -1,34 +1,35 @@
 #include<iostream>
-#include<fstream>
+//#include<fstream>
+
+int a,b;
 
 
   class AI {
   
-     AI() {
-     
-       //string take;
-       //fstream read;
-       //read.open(define.cpp);
-
-     }
-
   };
+
+  struct data {
+     
+     int a,b;
+  }ob;
 
  void test() {
 
-   #define swap (int)a
-   //std::cin>>swap;
-
- // std::cout<<data;
+  #define swap (int)ob.a
+   
 
 }
 
  int main() {
 
-  
-   int a=10,b=20;
-
-   a=b;
-  
-    std::cout<<a<<"  "<<swap;
+    data ob;
+    int a,b;
+    a=1;b=1;
+    ob.a=2;ob.b=2;
+    ::a=3;::b=3; 
+    ::ob.a=4;::ob.b=4;
+    //std::cout<<ob.a<<"  "<<swap;
+ 
+ // std::cout<<"hellow";
+  std::cout<<a<<b<<"\n"<<ob.a<<ob.b<<"\n"<<::a<<::b<<"\n"<<::ob.a<<::ob.b; 
  }
