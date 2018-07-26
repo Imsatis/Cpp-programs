@@ -3,8 +3,10 @@
 /* Testing Operator */
 
 #include<iostream>
+#include<conio.h>
 
 using namespace std;
+int temp=1;
 
    class abs {
       
@@ -13,22 +15,40 @@ using namespace std;
       public:
 
       abs() {
+      cout<<"\ndefault ";getch();
         
 	a=1;
 	b=1;
       }
     
-    abs(int x,int y) {
+    abs(int x,int y,int z) {
          
-         a=x;
+   cout<<"\nparam";getch();
+   
+   if  (temp<2)  {
+	 a=x;
 	 b=y;
+         r=z;
+	 cout<<"\nif ";getch();
+	 temp++;
+	} 
+      else {	  
+	 a=x;
+	 b=y;
+	 r=0;
+	 cout<<"\nelse ";getch();
+	 temp++;
+       }	 
+
         
       }
-   //  abs(abs &cc){
-        
+     abs(abs &cc){
+      
+      cout<<"\ncopy ";getch();
       //  a=cc.a;
       //  b=cc.b;
-   //  } 
+          a=5;b=10;r=15;
+	  } 
       
     abs ope(abs cob){
 
@@ -48,7 +68,7 @@ using namespace std;
      } 
     void show (){
 
-     cout<<"\n"<<a<<"  "<<b;
+   cout<<"\n"<<a<<"  "<<b<<"  "<<r<<" temp  "<<temp;
 
 
     } 
@@ -60,16 +80,29 @@ using namespace std;
 
    //   int &x=y;
    //   cout<<y;
-
-      abs ob1(10,20);
-
-      abs ob2(100,200);
+       cout<<temp;
+       int i=10,j=20;
       
-      abs t=ob1.ope(ob2);
+      cout<<"\nob  "<<temp;
+      abs ob(i,j,11);
+    
+      cout<<"\nob1  "<<temp;
+      abs ob1=ob;
+
+      cout<<"\no  "<<temp;
+      abs o(1,1,1);
+
+    //  abs ob2(100,200);
+      
+    //  abs t=ob1.ope(ob2);
       //cout<<ob1.;
      // ob1.add(ob2);
       ob1.show();
-      ob2.show();
-      t.show();
-   
+      ob.show();
+     // ob2.show();
+     // t.show();
+
+    o.show();
+    cout<<"\n"<<temp;
+
    }
