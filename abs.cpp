@@ -9,6 +9,7 @@ using namespace std;
    class abs {
       
       int a,b,r;
+     
       public:
 
       abs() {
@@ -23,16 +24,18 @@ using namespace std;
 	 b=y;
         
       }
-     abs(abs &cc){
+   //  abs(abs &cc){
         
-        a=cc.a;
-	b=cc.b;
-     } 
+      //  a=cc.a;
+      //  b=cc.b;
+   //  } 
       
-    abs operator+(abs cob){
+    abs ope(abs cob){
 
        abs tob;
-
+       tob.a=a+cob.a;
+       tob.b=b+cob.b;
+       return tob;
         
 
       }
@@ -53,15 +56,20 @@ using namespace std;
    };
 
    int main() {
+    //  int y(101);
+
+   //   int &x=y;
+   //   cout<<y;
 
       abs ob1(10,20);
 
-      abs ob2(1.1);
+      abs ob2(100,200);
       
-      ob1;
+      abs t=ob1.ope(ob2);
       //cout<<ob1.;
-      ob1.add(ob2);
+     // ob1.add(ob2);
       ob1.show();
       ob2.show();
+      t.show();
    
    }
