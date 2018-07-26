@@ -104,5 +104,9 @@ int temp=1;
 
     o.show();
     cout<<"\n"<<temp;
+    int t;
+    t=11;
+    int& re=t;
+    re=12;
 
    }
