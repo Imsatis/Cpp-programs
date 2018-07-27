@@ -8,6 +8,15 @@
 using namespace std;
 int temp=1;
 
+   int oop=22;
+
+   int& foo() {
+   return oop; 
+   
+   }
+
+
+
    class abs {
       
       int a,b,r;
@@ -105,8 +114,11 @@ int temp=1;
     o.show();
     cout<<"\n"<<temp;
     int t;
-    t=11;
+  //  t=11;
     int& re=t;
     re=12;
+    foo()=10;
+    cout<<"\n"<<foo()<<"   "<<oop;
 
    }
+         
