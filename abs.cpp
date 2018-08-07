@@ -8,9 +8,10 @@
 using namespace std;
 int temp=1;
 
-   int oop=22;
+   int oop;
 
    int& foo() {
+   oop=123;
    return oop; 
    
    }
@@ -117,8 +118,9 @@ int temp=1;
   //  t=11;
     int& re=t;
     re=12;
-    foo()=10;
-    cout<<"\n"<<foo()<<"   "<<oop;
+    foo()=456;
+    cout<<"\nfoo "<<foo()<<"\n oop  "<<oop;
+
 
    }
          
