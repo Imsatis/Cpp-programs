@@ -1,33 +1,37 @@
 #include<iostream>
 #include<conio.h>
+#define x 2
 
 
 using namespace std;
 
  class bi {
 
- int a,b;
+// int a,b;
+  char v[];
+
       
   public:    
-     int convert(int,int);
+     void convert(int);
      void show();
     
   };
 
-  int bi::convert(int x,int y) {    //function overlaoding
-    char v[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},i=0;
-    for(;y>=1;) {
+  void bi::convert(int y) {    //function overlaoding
+      char i=0;
+
+     for(;y>=1;) {
         
 	v[i]=y%x;
 	i++;
 	y=y/x;
+//	cout<<"hellow";
 //	getch();
 
      }  
-     for(i=15;i>=0;i--) { cout<<(int)v[i];}
+ //    cout<<sizeof(v[i]);
+    for(int j=i-1;j>=0;j--) { cout<<(int)v[j];}
 
-
-//     return x+y;
 
   }
 
@@ -41,18 +45,19 @@ using namespace std;
 
   void bi::show() { 
   bi o;
-  o.a=10;
+//  o.a=10;
 
-  cout<<"\n"<<o.a<<"  "<<o.b<<"\n" ;
+ // cout<<"\n"<<o.a<<"  "<<o.b<<"\n" ;
 
   }
 
   int main() {
      bi ob;
+     int y;
+     cin>>y;
     
  //  cout<<convert(2,11)<<"\n";
- //   cout<<
-    ob.convert(2,16674);
+   ob.convert(y);
 //     cout<<
   // ob.show();
 
