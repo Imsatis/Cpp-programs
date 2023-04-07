@@ -1,0 +1,60 @@
+
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int arr[] = {1, 2, 3, 4, 5};
+   int al = sizeof(arr)/sizeof(arr[0]);
+   
+   for(int i = al/2; i >= 0; i--) {
+       
+       int cPos = i;
+          cout<<cPos<<endl;
+       while(true) {
+          int lc = 2 * (cPos + 1) - 1;
+          int rc = lc+1;
+
+          //No child exists
+          if(lc >= al && rc >= al) {
+                break;
+          }
+          
+          //It means only left child exists
+          if(rc > al && lc <= al) {
+              if(arr[lc] > arr[cPos]) {
+                  int temp = arr[cPos];
+                  arr[cPos] = arr[lc];
+                  arr[lc] = temp;
+              }
+          }else if(rc <= al && lc <= al) {
+              if(arr[lc] > arr[rc]) {
+                  int temp = arr[cPos];
+                  arr[cPos] = arr[lc];
+                  arr[lc] = temp;
+                  cPos = lc;
+              }else {
+                  int temp = arr[cPos];
+                  arr[cPos] = arr[rc];
+                  arr[rc] = temp;
+                  cPos = rc;
+              }
+          }
+       }
+   }
+   
+   for(auto data : arr) {
+       cout<<data<<endl;
+   }
+
+    return 0;
+}
